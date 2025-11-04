@@ -1,17 +1,27 @@
 {
-    "server": {
-      "port": 3001,
-      "uploadChunkSize": 1048576,
-      "maxFileSize": 4294967296
-    },
-    "psp": {
-      "targetPath": "/ISO",
-      "autoDetect": true,
-      "bufferSize": 2097152
-    },
-    "temp": {
-      "directory": "./temp",
-      "autoCleanup": true,
-      "maxAge": 3600
-    }
+  "server": {
+    "host": "0.0.0.0",
+    "port": 3001,
+    "threads": 4,
+    "cors_origin": "http://localhost:5173"
+  },
+  "upload": {
+    "temp_path": "./temp",
+    "max_file_size": 4294967296,
+    "allowed_formats": [ ".iso", ".cso", ".pbp" ],
+    "chunk_size": 2097152,
+    "auto_cleanup": true
+  },
+  "psp": {
+    "vendor_id": "0x054C",
+    "product_id": "0x01C9",
+    "target_path": "/ISO",
+    "buffer_size": 2097152,
+    "timeout": 5000
+  },
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": "./logs/psp_loader.log"
   }
+}
