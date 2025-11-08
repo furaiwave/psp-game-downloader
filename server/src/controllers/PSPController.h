@@ -6,6 +6,7 @@
 #include <vector>
 
 class PSPDevice;
+
 namespace services {
 	class TransferService;
 }
@@ -21,7 +22,7 @@ public:
 	crow::json::wvalue getDeviceInfo();
 	crow::json::wvalue getDrives();
 	crow::json::wvalue getStorageInfo();
-	crow::json::wvalue getgGamesList();
+	crow::json::wvalue getGameList();
 	crow::json::wvalue getGameInfo(const std::string& gameId);
 	crow::json::wvalue deleteGame(const std::string& gameId);
 	crow::json::wvalue getFolders(const std::string& path = "/");
